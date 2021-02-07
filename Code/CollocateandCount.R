@@ -1,5 +1,6 @@
 #code to build frequency table of filtered words from a corpus
 cleanText<-function(raw.text){
+  split.text<-unlist(strsplit(raw.text, ""))
   split.text<-gsub("-", " ", split.text)
   split.text<-tolower(split.text)
   split.text<-split.text[which(split.text %in% c(letters, " "))]
